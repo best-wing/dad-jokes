@@ -1,0 +1,122 @@
+.searchBar {
+  position: relative;
+  width: 300px;
+  margin: auto;
+}
+
+.searchBarInput {
+  width: 100%;
+  padding: 14px 30px 14px 10px;
+  font-size: 16px;
+  border: 2px solid #0059ff;
+  border-radius: 8px;
+  background-color: transparent;
+  color: #ccc;
+}
+
+.searchBarInput:focus-visible {
+  outline: 1px solid #4c86f1;
+}
+
+.indicator {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.upArrow {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 7px solid #0059ff;
+}
+
+.downArrow {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 7px solid #0059ff;
+}
+
+.curvedArrow {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  background-color: transparent;
+  cursor: pointer;
+  animation: rotate 2s infinite linear;
+  font-size: 0px;
+}
+
+@keyframes rotate {
+  from {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.jokeList {
+  width: 300px;
+  height: 250px;
+  margin: 10px auto;
+  border: 2px solid #3c516d;
+  border-radius: 8px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.jokeList::-webkit-scrollbar {
+  width: 10px;
+}
+
+.jokeList::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 8px;
+}
+
+.jokeList::-webkit-scrollbar-thumb {
+  background-color: #b0b0b0;
+  border-radius: 8px;
+  border: 2px solid #f1f1f1;
+}
+
+.jokeList::-webkit-scrollbar-thumb:hover {
+  background-color: #a0a0a0;
+}
+
+.jokeListItem {
+  color: #ccc;
+  width: 260px;
+  height: 50px;
+  margin: 0px auto;
+  padding: 0px 10px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.jokeListItem:hover {
+  color: #0059ff;
+  background-color: #2d2d3d;
+}
+
+.jokeListItemText {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
